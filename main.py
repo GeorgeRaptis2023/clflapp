@@ -25,11 +25,11 @@ class LoginPage(ft.UserControl):
                     self.update()
                     return
                 else:
-                    self.message.value, self.message.color = result.json(), "red"
+                    self.message.value, self.message.color = "b", "red"
                     self.update()
                     return
             except:
-                self.message.value, self.message.color = result.json(), "red"
+                self.message.value, self.message.color = "c", "red"
                 self.update()
                 return
 
