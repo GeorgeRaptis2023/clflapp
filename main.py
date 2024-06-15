@@ -28,8 +28,13 @@ class LoginPage(ft.UserControl):
                     self.message.value, self.message.color = "failed connection", "red"
                     self.update()
                     return
-            except Exception as e:
-                self.message.value, self.message.color = e, "red"
+            except:
+                result=[{'correct': 2, 'id': 'T5', 'question': 'Τι επιστρέφει ο παρακάτω κώδικας:\n<pre>\ndef func(a, b, c, d):\n    print (a+d)\nfunc(1,2,3,4)\n</pre>\n', 'replies': {'1': '1 4', '2': '5', '3': 'error', '4': '3', '5': 'Δεν γνωρίζω'}},
+{'correct': 3, 'id': 'Q6', 'question': 'Τι ορίζουμε με τον παρακάτω κώδικα;\n<pre>\ndef a(b,c,d,e):\n    pass\n</pre>\n', 'replies': {'1': 'μία λίστα και την αρχικοποίησή της', '2': 'μια κλάση', '3': 'μια συνάρτηση που δεν κάνει κάτι', '4': 'τίποτα από τα παραπάνω', '5': 'Δεν γνωρίζω'},
+{'correct': 3, 'id': 'T7', 'question': 'Τι θα επιστρέψει ο παρακάτω κώδικας;\n<pre>\ndef func(*a):\n\treturn sum([x for x in a if x%2 == 0])\nprint(func(2,3,4,5))\n</pre>\n', 'replies': {'1': 'error', '2': '14', '3': '6', '4': '8', '5': '[2,4]', '6': 'Δεν γνωρίζω'}},
+{'correct': 3, 'id': 'T8', 'question': 'Τι θα επιστρέψει ο κώδικας;\n<pre>\ndef d(x = 0, y = 0):\n\treturn (x**2 + y**2)**0.5\nd(3)\n</pre>\n', 'replies': {'1': 'error', '2': '3', '3': '3.0', '4': '9.0', '5': 'Δεν γνωρίζω'}},
+{'correct': 2, 'id': 'Q4', 'question': 'Kαθολικές μεταβλητές είναι ...\n', 'replies': {'1': 'εκείνες που ορίζονται ως global εντός συναρτήσεων', '2': 'οι μεταβλητές που παίρνουν τιμή εκτός συναρτήσεων', '3': 'οι μεταβλητές που περνάνε ως ορίσματα συναρτήσεων', '4': 'Δεν γνωρίζω'}},
+{'correct': 4, 'id': 'Q2', 'question': "Τι θα τυπώσει το πρόγραμμα;\n<pre>\ndef f():\n\ta = a + 7\n\tprint(a, end = ' ')\na = 5\nf()\nprint(a, end = ' ')\n</pre>\n", 'replies': {'1': '12 5', '2': '12 12', '3': '7 5', '4': 'UnboundLocalError', '5': 'Δεν γνωρίζω'}}]
                 self.update()
                 return
 
