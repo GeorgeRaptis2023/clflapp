@@ -25,11 +25,11 @@ class LoginPage(ft.UserControl):
                     self.update()
                     return
                 else:
-                    self.message.value, self.message.color = "b", "red"
+                    self.message.value, self.message.color = "failed connection", "red"
                     self.update()
                     return
-            except:
-                self.message.value, self.message.color = "c"+result.json(), "red"
+            except Exception as e::
+                self.message.value, self.message.color = e, "red"
                 self.update()
                 return
 
